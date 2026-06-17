@@ -2,6 +2,3 @@ streamlit
 pandas
 plotly
 fpdf2
-sqlite3
-datetime
-os
