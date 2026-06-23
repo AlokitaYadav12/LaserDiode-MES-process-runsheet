@@ -1011,12 +1011,16 @@ elif page == "Process Run Sheet":
         st.session_state.current_step = 0
 
 
+    if "process_box" not in st.session_state:
+         st.session_state.process_box = process_flow[0]
+
     process = st.selectbox(
-        "Current Process",
-        process_flow,
-        index=st.session_state.current_step,
-        key="process_box"
-    )     
+       "Current Process",
+       process_flow,
+       index=st.session_state.current_step,
+       key="process_box"
+    )
+      
  
     progress = (
         (st.session_state.current_step)
@@ -1501,9 +1505,7 @@ elif page == "Process Run Sheet":
 
                   st.session_state.run_saved = False
                   
-                  st.session_state.process_box = process_flow[
-                      st.session_state.current_step
-                  ]
+                 
 
                   st.rerun()
 
