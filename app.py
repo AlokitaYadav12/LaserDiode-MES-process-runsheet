@@ -1510,12 +1510,17 @@ elif page == "Process Run Sheet":
 
                else:
 
-                  st.session_state.fabrication_completed = True
+                  
                   st.success(
                       "🎉 Fabrication Flow Completed Successfully"
                   )
+                  import time
+                  time.sleep(2) 
+                   
                   st.session_state.current_step = 0
                   st.session_state.run_saved = False
+                  st.session_state.fabrication_completed = True 
+                   
                   st.rerun()  
     
 # -------------------------
