@@ -1514,6 +1514,9 @@ elif page == "Process Run Sheet":
                   st.success(
                       "🎉 Fabrication Flow Completed Successfully"
                   )
+                  st.session_state.current_step = 0
+                  st.session_state.run_saved = False
+                  st.rerun()  
     
 # -------------------------
 # VIEW DATA
