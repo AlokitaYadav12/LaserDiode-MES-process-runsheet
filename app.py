@@ -1017,8 +1017,7 @@ elif page == "Process Run Sheet":
     process = st.selectbox(
        "Current Process",
        process_flow,
-       index=st.session_state.current_step,
-       key="process_box"
+       index=st.session_state.current_step
     )
       
  
